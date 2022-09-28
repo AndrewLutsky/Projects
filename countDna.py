@@ -1,12 +1,20 @@
-count = 0;
+text = open("rosalind_dna.txt","rt")
+s = text.read()
+text.close()
+
+
+countA = 0
+countB = 0
+countC = 0
+countD = 0
+
 for i in s:
 	if i == "A":
-		count +=1
-	if i == "G":
-		count +=1
+		countA +=1
 	if i == "C":
-		count +=1
+		countB +=1
+	if i == "G":
+		countC +=1
 	if i == "T":
-		count +=1
-
-print(count)
+		countD +=1
+print(countA,countB,countC,countD)
