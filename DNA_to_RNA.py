@@ -1,4 +1,4 @@
-text = open("rosalind_data.txt","rt")
+text = open("rosalind_rna.txt","rt")
 s = text.read()
 text.close()
 
