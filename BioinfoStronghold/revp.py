@@ -3,6 +3,7 @@ from Bio import SeqIO
 record = list(SeqIO.parse("rosalind_revp.txt", "fasta"))
 seq = record[0].seq
 
+#Finds Reverse complement
 def revComp(s):
     #defines dictionary for complementary sequences
     dict = {"A":"T","T":"A","C":"G","G":"C"}
@@ -17,9 +18,12 @@ def revComp(s):
 for i in range(4,13):
     #loops through the main string
     for j in range(len(seq)):
+        #finds the substring of length i
         substr = seq[j:j+i]
-#        print(substr, revComp(substr))
+        #looks to see if the substrings are equal
         if revComp(substr) == substr:
+            #looks to see if the index and length of the substring are less 
+            #than or equal to the length of the sequence
             if(i + j <= len(seq)):
                 print(j+1,i)
             
